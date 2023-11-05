@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #main {
+    padding-top: 100px; /* Make room for fixed header */
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header#nav {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff; /* Background color for nav */
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add shadow for depth */
+    z-index: 1000; /* Ensure the header is above other content */
+  }
+  
+  header#nav h1 {
+    font-size: 31px;
+    font-weight: 500; /* Make it a bit bolder */
+    color: #333; /* Darker text for better readability */
+  }
+  
+  nav#part2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-size: 1rem; /* Responsive font size */
+    color: #333;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #42D9C8; /* Highlight color on hover/focus */
+  }
+  
+  .app-button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .app-button span {
+    position: relative;
+    z-index: 2;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .app-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #42D9C8;
+    transition: left 0.4s ease;
+  }
+  
+  .app-button:hover:before,
+  .app-button:focus:before {
+    left: 0;
+  }
+  
+  .display {
+    flex: 1;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke; /* Lighter background for contrast */
+  }
+  
+  .display h1 {
+  font-size: 5.4vw; /* Responsive font size */
+   margin-bottom: 20px;
+   text-align: center;
+   font-weight: 600;
+   color:#333;
+}
+
+.display a span{
+  font-size: 40px;
+}
+
+  
+  .image-gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Spacing between images */
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
+  }
+  
+  @media (max-width: 768px) {
+    .nav-link {
+      font-size: 0.9rem;
+    }
+  
+    .display h1 {
+      font-size: 2rem;
+    }
+  
+    .app-button {
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header#nav {
+      padding: 0 20px;
+    }
+  
+    .nav-link {
+      margin: 0 10px;
+    }
+  
+    .display {
+      padding: 20px;
+    }
+  
+    .display h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Image container with relative positioning */
+.image-container {
+    position: relative;
+    width: 100%; /* adjust as needed */
+    margin: 20px 0;
+  }
+  
+  /* Floating passage styling */
+  .floating-passage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%; /* adjust as needed */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 2; /* Ensure it's above the image */
+  }
+  
+  /* Fixed footer styling */
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    z-index: 1001; /* Above other content but below the header */
+  }
+  
+  /* Responsive adjustments for footer */
+  @media (max-width: 768px) {
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Responsive adjustments for image container */
+  @media (max-width: 480px) {
+    .floating-passage {
+      font-size: 0.8rem;
+      padding: 5px;
+      width: 90%;
+    }
+  }
+  
+  /* Ensures images are responsive */
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #main #img1{
+    height: 207px;
+    width: 276px;
+    width:calc(276px*1.45);
+    height:calc(207px*1.45);
+
+    position: absolute;
+    left: 5%;
+    top: 35%;
+
+  }
+  #main #img2{
+    height: 138px;
+    width: 207px;
+    width:calc(237px*1.30);
+    height:calc(148px*1.30);
+    position: absolute;
+    right: 11%;
+    top: 24%;
+    
+  }
+  
+#main img{
+    transition: margin 0.4s ease;
+  }
+#main img:hover{
+  margin-top: -30px;
+}
+
+.video-player {
+  max-width: 640px;
+  margin: 20px auto;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#volume {
+  width: 100px;
+}
+
+#current-time,
+#duration {
+  margin-left: 10px;
+}
+
+
+

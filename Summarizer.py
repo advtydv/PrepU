@@ -20,7 +20,6 @@ def parse_response(response):
     return model_predictions['summary_text']
 
 def lambda_handler(event, context):
-    # Replace 'your-bucket-name' and 'your-transcribe-output.json' with the actual names
     bucket_name = 'prepudata'
     object_key = 'samplejob.json'
 
